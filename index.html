@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item-hasqr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng vvt-Shop
@@ -54,28 +56,28 @@
                                 <ul class="header__notify-list">
                                     <li class="header__notify-item header__notify-item--viewed">
                                         <a href="" class="header__notify-link ">
-                                            <img src="./assets/img/ohui-dautaytrang.jpg" alt="dầu tẩy trang" class="header__notify-img">
+                                            <img src="./assets/img/NH-Burberry-Weekend.jpg" alt="dầu tẩy trang" class="header__notify-img">
                                             <div class="header__notify-info">
-                                                <span class="header__notify-name">Xác thực chính hãng nguồn góc các sản phẩm Ohui</span>
-                                                <span class="header__notify-desc">HiddenTag là giải pháp xác thực hàng chính hãng bằng công nghệ tiên tiến nhất hiện nay</span>
+                                                <span class="header__notify-name">Nước hoa Burberry Weekend thời thượng hương thơm đầy mê hoặc</span>
+                                                <span class="header__notify-desc">Với hương thơm quyến rũ, nữ tính nhưng không kém phần tinh tế và ngọt ngào, đầy nổi bật và cuốn hút, đây chắc...</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="header__notify-item header__notify-item--viewed">
                                         <a href="" class="header__notify-link">
-                                            <img src="./assets/img/boduongam.jpg" alt="Bộ dưỡng ẩm" class="header__notify-img">
+                                            <img src="./assets/img/NH- Armaf-Club.jpg" alt="Bộ dưỡng ẩm" class="header__notify-img">
                                             <div class="header__notify-info">
-                                                <span class="header__notify-name">Sale Sốc bộ dưỡng Ohui The First Tái tạo trẻ hoá da SALE OFF 70%</span>
-                                                <span class="header__notify-desc">Gía chỉ còn 740.000đ(Gía gốc: 980.000đ)</span>
+                                                <span class="header__notify-name">Nước hoa cho nữ Armaf Club De Nuit EDP yêu kiều quyến rũ</span>
+                                                <span class="header__notify-desc">Một trong những dòng nước hoa nữ đến từ thương hiệu Armaf được săn đón nhiều không thể không nhắc đến...</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="header__notify-item">
                                         <a href="" class="header__notify-link">
-                                            <img src="./assets/img/setwhoodo.jpg" alt="Whoo đỏ Jinyulhyang" class="header__notify-img">
+                                            <img src="./assets/img/NH-Prada-Candy.jpg" alt="Whoo đỏ Jinyulhyang" class="header__notify-img">
                                             <div class="header__notify-info">
-                                                <span class="header__notify-name">Ohui ra măt Set Whoo đỏ Jinyulhyang bổ sung tân dịch cho làn da bị lão hóa</span>
-                                                <span class="header__notify-desc">Sản phẩm whoo đỏ jinyulyang được chiết suất từ các thảo dược thiên nhiên.</span>
+                                                <span class="header__notify-name">Nước hoa Prada Candy nồng nàn đầy cuốn hút với hương thơm khó phai</span>
+                                                <span class="header__notify-desc">Nếu bạn đang tìm kiếm một chai nước hoa làm quà tặng cho nàng mang hương thơm ngọt ngào, sang trọng cho một...</span>
                                             </div>
                                         </a>
                                     </li>
@@ -98,7 +100,11 @@
                 </nav>
                 <!-- header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="fas fa-search"></i>
+                    </label>
+
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -109,6 +115,9 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
                     <div class="header__search">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder=" Nhập để tìm kiếm sản phẩm">
@@ -117,10 +126,10 @@
                                 <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                                 <ul class="header__search-history-list">
                                     <li class="header__search-history-item">
-                                        <a href="">Kem dưỡng da</a>
+                                        <a href="">Nước hoa nam</a>
                                     </li>
                                     <li class="header__search-history-item">
-                                        <a href="">Kem trị mụn</a>
+                                        <a href="">Nước hoa nữ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -158,14 +167,619 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
-        <div class="container">
+        <div class="app-container">
+          <div class="grid wide">
+               <div class="row sm-gutter app-content">
+                   <div class="col l-2 m-0 c-0">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fas fa-list"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category__list">
+                                <li class="category__item category__item--active">
+                                    <a href="#" class="category__item-link">Nước Hoa Niche</a>
+                                </li>
+                                <li class="category__item">
+                                    <a href="#" class="category__item-link">Nước Hoa Nam</a>
+                                </li>
+                                <li class="category__item">
+                                    <a href="#" class="category__item-link">Nước Hoa Nữ </a>
+                                </li>
+                                <li class="category__item">
+                                    <a href="#" class="category__item-link">Nước Hoa Unisex </a>
+                                </li>
+                            </ul>
+                        </nav>
+                   </div>
+                   <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
+                            <span class="home-filter__lable">Sắp xếp theo</span>
+                            <button class="home-filter_btn btn">Phổ biến</button>
+                            <button class="home-filter_btn btn btn--primary">Mới nhất </button>
+                            <button class="home-filter_btn btn">Bán chạy</button>
 
+                            <div class="select-input">
+                                <span class="select-input__lable">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                <!-- list options -->
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Cao đến thấp</a>                                      
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>/14
+                                   
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Niche</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Nam</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Unisex</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Niche</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Nam</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Unisex</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Niche</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Nam</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Unisex</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Niche</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Nam</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Nước Hoa Unisex</a>
+                                </li>   
+                            </ul>
+                        </nav>
+
+                        <!-- home product -->
+                        <div class="home-product">
+                            <div class="row sm-gutter ">
+                                <!-- 1 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>                              
+                                <!-- 2 -->
+                                <div class="col l-2-4 m-4 c-6" >
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 3 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 4 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 5 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 6 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 7 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 8 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 9 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                                <!-- 10 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#" class="home-product-item">
+                                        <img src="./assets/img/product/roja-parfurms.jpg" alt="roja-parfurms" class="home-product__img">
+                                        <h4 class="home-product__name">Nước hoa niche ROJA PARFUMS De La Nuit 1</h4>
+                                        <div class="home-product__rice">
+                                            <span class="home-product__rice-old">3.100.000đ</span>
+                                            <span class="home-product__rice-current">2.325.000đ</span>
+                                        </div>
+                                        <div class="home-product__action">
+                                            <span class="home-product__like home-product__like--liked">
+                                                <i class="home-product__like-icon-emty far fa-heart"></i>
+                                                <i class="home-product__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product__rating">
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="home-product__rating-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product__origin">
+                                            <span class="home-product__brand">Whoo</span>
+                                            <span class="home-product__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product__sale-off">
+                                            <span class="home-product__percent">25%</span>
+                                            <span class="home-product__lable">GIẢM</span>
+                                        </div>
+                                    </a>  
+                                </div>
+                            </div>
+                        </div>
+                        <!-- phan trang -->
+                        <ul class="pagination home-product__pagination">
+                            <li class="pagnation-item ">
+                                <a href="#" class="pagnation-item__link">
+                                    <i class="pagnation-item__link fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="pagnation-item pagnation-item--active">
+                                <a href="#" class="pagnation-item__link">1</a>
+                            </li>
+                            <li class="pagnation-item">
+                                <a href="#" class="pagnation-item__link">2</a>
+                            </li>
+                            <li class="pagnation-item">
+                                <a href="#" class="pagnation-item__link">3</a>
+                            </li>
+                            <li class="pagnation-item">
+                                <a href="#" class="pagnation-item__link">4</a>
+                            </li>
+                            <li class="pagnation-item">
+                                <a href="#" class="pagnation-item__link">5</a>
+                            </li>
+                            <li class="pagnation-item">
+                                <a href="#" class="pagnation-item__link">...</a>
+                            </li>
+                            <li class="pagnation-item">
+                                <a href="#" class="pagnation-item__link">14</a>
+                            </li>
+                            <li class="pagnation-item">
+                                <a href="#" class="pagnation-item__link">
+                                    <i class="pagnation-item__icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                   </div>
+               </div>
+          </div>
         </div>
 
         <footer class="footer">
-
+            <div class="grid wide">
+                <div class="row footer__content">
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">vvt-Shop Mall</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Giới thiệu</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Nước Hoa Niche</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Nước Hoa Nam</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Nước Hoa Nữ</a>                               
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Theo dõi</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">
+                                    <i class="footer__item-icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">
+                                    <i class="footer__item-icon fab fa-instagram"></i>
+                                    intergram
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">
+                                    <i class="footer__item-icon fab fa-linkedin"></i>
+                                    Linked
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-8 c-12">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="/assets/img/Qr.png" alt="Download Qr" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                            <a href="" class="footer__download-apps-link" >
+                                <img src="/assets/img/googleplay-img.png" alt="Google play" class="footer__download-apps-img">
+                            </a>
+                            <a href="" class="footer__download-apps-link">
+                                 <img src="/assets/img/appstore-img.png" alt="App store" class="footer__download-apps-img">
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid wide">
+                    <p class="footer__text">© 2022 - Bản quyền thuộc về VVT</p>
+                </div>
+            </div>
         </footer>
 
         <!---------------- modal layout ------------------------>
