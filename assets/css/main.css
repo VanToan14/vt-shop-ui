@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 200;
     height: var(--header-height);
     background-image: linear-gradient(0, #fd5f32, #f6412e);
 }
@@ -267,12 +267,15 @@
 }
 
 /* Auth modal */
-
+.open__auth-form{
+    display: block !important;
+}
 .auth-form {
     width: 500px;
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
+    display: none;
 }
 
 .auth-form__container {
